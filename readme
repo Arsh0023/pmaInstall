@@ -1,1 +1,6 @@
 change pma.yml to docker-compose.yml
+
+wget https://git.clicklabs.in/docker/Pma-docker/repository/master/archive.zip
+cd Pm(press tab)
+change the file required to docker-compose.yaml
+docker compose up -d
