@@ -1,6 +1,14 @@
 change pma.yml to docker-compose.yml
 
+Install Docker Compose (Link for graviton)
+DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+mkdir -p $DOCKER_CONFIG/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.20.0/docker-compose-linux-aarch64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+
+
 wget https://git.clicklabs.in/docker/Pma-docker/repository/master/archive.zip
+unzip archive.zip
 cd Pm(press tab)
 change the file required to docker-compose.yaml
 docker compose up -d
