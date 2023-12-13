@@ -21,7 +21,7 @@ if [ "$ARCHITECTURE" = "aarch64" ]; then
     mv pma_graviton.yaml docker-compose.yml
     docker compose up -d
 
-    if [ $? -eq 0 ]; then
+    if [ $? -ne 0 ]; then
         docker-compose up -d
     fi
 fi
@@ -41,7 +41,7 @@ if [ "$ARCHITECTURE" = "x86_64" ]; then
     mv pma.yml docker-compose.yml
     docker compose up -d
 
-    if [ $? -eq 0 ]; then
+    if [ $? -ne 0 ]; then
         docker-compose up -d
     fi
 fi
