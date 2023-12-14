@@ -15,10 +15,9 @@ if [ "$ARCHITECTURE" = "aarch64" ]; then
     service docker start
 
     # Get Pma
-    wget https://codeload.github.com/Arsh0023/pmaInstall/zip/refs/heads/master
-    mv master archive.zip
+    wget https://git.clicklabs.in/docker/Pma-docker/repository/master/archive.zip
     unzip archive.zip
-    cd $(ls | grep 'pmaInstall')
+    cd $(ls | grep 'Pma-docker-master')
     mv pma_graviton.yaml docker-compose.yml
     docker compose up -d
 
@@ -36,10 +35,9 @@ if [ "$ARCHITECTURE" = "x86_64" ]; then
     service docker start
 
     # Get Pma
-    wget https://codeload.github.com/Arsh0023/pmaInstall/zip/refs/heads/master
-    mv master archive.zip
+    wget https://git.clicklabs.in/docker/Pma-docker/repository/master/archive.zip
     unzip archive.zip
-    cd $(ls | grep 'pmaInstall')
+    cd $(ls | grep 'Pma-docker-master')
     mv pma.yml docker-compose.yml
     docker compose up -d
 

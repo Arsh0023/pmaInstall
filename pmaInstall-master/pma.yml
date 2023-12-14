@@ -1,0 +1,19 @@
+version: '3'
+services:
+  pma:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: pma
+    ports:
+      - 444:80
+    environment:
+      PMA_HOST: 127.0.0.1
+    network_mode: host
+    volumes:
+      - ./def.conf:/etc/apache2/sites-available/000-default.conf
+      - ./ports.conf:/etc/apache2/ports.conf
+      #    networks:
+      #- pma-network
+
+      #networks:
+      #pma-network:
+      #driver: bridge
